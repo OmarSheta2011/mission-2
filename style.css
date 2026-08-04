@@ -22,6 +22,7 @@ body {
 .main-container {
   text-align: center;
   max-width: 90rem;
+  min-width: 80%;
   height: 70%;
   display: grid;
   grid-template-areas: "sign-up sign-in";
@@ -77,6 +78,7 @@ form {
   text-transform: uppercase;
   font-family: sans-serif;
   cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .sign-up-btn {
