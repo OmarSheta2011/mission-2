@@ -13,6 +13,8 @@ body {
   font-size: 1.6rem;
   width: 100vw;
   height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,28 +22,35 @@ body {
 }
 
 .main-container {
-  text-align: center;
-  max-width: 90rem;
-  min-width: 80%;
-  height: 70%;
-  display: grid;
-  grid-template-areas: "sign-up sign-in";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  margin: auto;
+  width: 80%;
+  max-width: 1200px;
+  min-width: auto;
+  min-height: 400px;
+  display: flex;
   border-radius: 8px;
   background-color: white;
-  overflow: hidden;
+  text-align: center;
   text-transform: capitalize;
-  box-shadow: -1px 1px 20px 0px;
+  box-shadow: -1px 1px 2rem 0px;
 }
 
 .sign-up {
-  height: 100%;
-  width: 100%;
+  flex: 1;
   padding: 2rem;
-  grid-area: sign-up;
 }
 
+.sign-in {
+  color: white;
+  padding: 2rem;
+  background-image: linear-gradient(to right, #ff4b2b, #ff416c);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -85,38 +94,28 @@ form {
   background-color: #ff4b2b;
 }
 
-.sign-in {
-  color: white;
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
-  grid-area: sign-in;
-  background-image: linear-gradient(to right, #ff4b2b, #ff416c);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-
 .sign-in-btn {
   background: none;
   border: 1px solid white;
 }
 
 @media (max-width: 900px) {
-
-  :root{
-    font-size: 40%;
+  :root {
+    font-size: 50%;
   }
   .main-container {
-    display: flex;
     flex-direction: column-reverse;
   }
-  .sign-in {
-    height: 40%;
+  .sign-up {
+    flex: 2;
   }
   .sign-in {
-    height: 60%;
+    flex: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    font-size: 30%;
   }
 }
